@@ -1,0 +1,55 @@
+{% extends "szablon.html" %}
+
+{% load static %}
+
+{% block link %}
+<link href="{% static 'css/search.css' %}" rel="stylesheet"/>
+{% endblock %}
+
+
+{% block content %}
+<h1>Przeglądaj samochody  <i class="fa-solid fa-car-rear" style="font-size: 34px; color: #C0C0C0;"></i></h1>
+
+
+{% for samochod in page_obj %}
+
+<div class="page-offer">
+   <div class="offer-img">
+      <img class="car-img" src="../media/{{samochod.image}}">
+   </div>
+   <div class="offer-info">
+      <div class="offer-name">
+         <p>{{samochod.marka}} {{samochod.model}}</p>
+      </div>
+      <div class="offer-parameters">
+         <p>{{samochod.rok_produkcji}} <i class="fa-solid fa-diamond" style="font-size: 10px; margin-bottom: 2px;"></i> {{samochod.przebieg}} km <i class="fa-solid fa-diamond" style="font-size: 10px; margin-bottom: 2px;"></i> {{samochod.moc}} KM <i class="fa-solid fa-diamond" style="font-size: 10px; margin-bottom: 2px;"></i> {{samochod.pojemnosc}}l <i class="fa-solid fa-diamond" style="font-size: 10px; margin-bottom: 2px;"></i> {{samochod.paliwo}}</p>
+      </div>
+   </div>
+   <div class="offer-price">
+      <p>{{samochod.cena}} <span>PLN</span></p>
+   </div>
+</div>
+{% endfor %}
+
+
+<div class="pagination">
+    <span class="step-links">
+        {% if page_obj.has_previous %}
+            <a href="?page=1">&laquo; first</a>
+            <a href="?page={{ page_obj.previous_page_number }}">previous</a>
+        {% endif %}
+
+        <span class="current">
+            Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
+        </span>
+
+        {% if page_obj.has_next %}
+            <a href="?page={{ page_obj.next_page_number }}">next</a>
+            <a href="?page={{ page_obj.paginator.num_pages }}">last &raquo;</a>
+        {% endif %}
+    </span>
+</div>
+
+{% endblock %}
+
+

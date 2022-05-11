@@ -1,0 +1,63 @@
+.page-offer {
+    width: 70%;
+    height: 220px;
+    border: solid 2px #FF4E4E;
+    outline: solid 6px #C6E5FF;
+    border-radius: 15px;
+    margin-bottom: 50px;
+    display: flex;
+    align-item: center;
+    -webkit-box-shadow: 0px 10px 15px -5px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0px 10px 15px -5px rgba(0,0,0,0.5);
+    box-shadow: 0px 10px 15px -5px rgba(0,0,0,0.5);
+    transition: all 0.4s ease-in-out;
+}
+
+.page-offer:hover {
+    transform: scale(0.98);
+    opacity: 0.8;
+}
+
+.offer-img {
+    margin-left: 10px;
+    margin-top: 8px;
+}
+
+.car-img {
+    height: 200px;
+    width: 250px;
+    border-radius: 10px;
+    border: solid 1px #C6E5FF;
+}
+
+.offer-info {
+    margin-top: 0px;
+    margin-left: 30px;
+}
+
+.offer-name p {
+    font-size: 26px;
+    font-weight: 700;
+    margin-top: 24px;
+}
+
+.offer-parameters p {
+    font-size: 18px;
+}
+
+.offer-price:last-of-type {
+    margin-left: auto;
+    margin-right: 30px;
+}
+
+.offer-price p {
+    font-size: 34px;
+    font-weight: 700;
+    color: #FF4E4E;
+    margin-top: 20px;
+}
+
+.offer-price span {
+    font-size: 22px;
+}
+

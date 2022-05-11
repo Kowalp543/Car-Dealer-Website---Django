@@ -1,0 +1,50 @@
+{% extends 'szablon.html' %}
+
+{% load crispy_forms_tags %}
+
+{% block link %}
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+{% endblock %}
+
+{% block content %}
+<h1>Dodaj ogłoszenie <i class="fa-solid fa-list-ul" style="font-size: 34px; color: #C0C0C0;"></i></h1>
+
+  <form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div class="row">
+      <div class="col-6">
+        {{ form.marka|as_crispy_field }}
+      </div>
+      <div class="col-6">
+        {{ form.model|as_crispy_field }}
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-6">
+        {{ form.przebieg|as_crispy_field }}
+      </div>
+      <div class="col-6">
+        {{ form.rok_produkcji|as_crispy_field }}
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-6">
+        {{ form.moc|as_crispy_field }}
+      </div>
+      <div class="col-6">
+        {{ form.pojemnosc|as_crispy_field }}
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-6">
+        {{ form.paliwo|as_crispy_field }}
+      </div>
+      <div class="col-6">
+        {{ form.cena|as_crispy_field }}
+      </div>
+    </div>
+    {{ form.image|as_crispy_field }}
+<!--    <input type="file" name="{{ form.image }}">-->
+    <button type="submit" class="btn btn-success">Save Car</button>
+  </form>
+{% endblock %}

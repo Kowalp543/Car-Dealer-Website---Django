@@ -1,0 +1,74 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>DFK Komis Samochodowy</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="{% static 'css/style.css' %}" rel="stylesheet"/>
+    <script src="{% static 'fontawesomefree/js/all.min.js' %}"></script>
+    <link href="{% static 'fontawesomefree/css/all.min.css' %}" rel="stylesheet" type="text/css">
+
+    {% block link %}{% endblock %}
+
+</head>
+<body>
+    <header class="header">
+        <div class="container-1">
+            <a href="/">DFK</a>
+            <div class="page-nav-list">
+                <ul>
+                    <li><a href="/">Strona główna</a></li>
+                    <li><a href="/search/">Przeglądaj</a></li>
+                    <li><a href="/add/">Dodaj ogłoszenie</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <div class="page-border"></div>
+    <div class="page-border-2"></div>
+
+    <main class ="container-2">
+        <div class="page-about">
+            {% block content %}{% endblock %}
+        </div>
+    </main>
+
+    <footer>
+        <div class="container-footer">
+            <div class="page-footer">
+                <div class="page-footer-border"></div>
+                <div class="page-footer-1">
+                    <div class="page-footer-logo">
+                        <p>DFK</p>
+                    </div>
+                    <div class="page-footer-nav">
+                        <div class="page-footer-nav-2">
+                            <div class="page-footer-nav-contact">
+                                <span>Adres</span>
+                                <p>DFK - Komis samochodowy</p>
+                                <p>ul. Długosza 25</p>
+                                <p>20-170 Kraków</p>
+                            </div>
+                            <div class="page-footer-nav-contact">
+                                <span>Kontakt</span>
+                                <a href="tel: +48652447231"><p>tel. 652 447 231</p></a>
+                            </div>
+                            <div class="page-footer-nav-menu">
+                                <ul>
+                                    <li><a href="/">Strona główna</a></li>
+                                    <li><a href="/search/">Przeglądaj samochody</a></li>
+                                    <li><a href="/add/">Dadaj ogłoszenie</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
