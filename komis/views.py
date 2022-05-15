@@ -13,7 +13,9 @@ def home(request):
 
 def search(request, **kwargs):
     if request.method == 'POST':
-        return redirect('oferty', marka=request.POST['marka'], price_min=request.POST['price_min'], price_max=request.POST['price_max'])
+        return redirect('oferty', marka=request.POST['marka'],
+                        price_min=request.POST['price_min'],
+                        price_max=request.POST['price_max'])
 
     if kwargs['marka'] == 'all':
         samochod_list = Samochod.objects.filter(cena__gte=kwargs['price_min'],
