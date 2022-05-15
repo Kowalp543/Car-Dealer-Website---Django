@@ -10,7 +10,7 @@ class Samochod(models.Model):
     marka = models.CharField(max_length=255)
     model = models.CharField(max_length=255)
     przebieg = models.IntegerField()
-    rok_produkcji = models.IntegerField()  # DateField() ?????
+    rok_produkcji = models.IntegerField()
     moc = models.IntegerField()
     pojemnosc = models.FloatField()
     cena = models.IntegerField()
@@ -22,7 +22,7 @@ class Samochod(models.Model):
     image = models.ImageField(upload_to='images')
 
     def get_absolute_url(self):
-        return reverse('oferty')
+        return reverse('home')
 
     def __str__(self):
         return self.marka

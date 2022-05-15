@@ -30,15 +30,16 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'komis.apps.KomisConfig',
+    'users.apps.UsersConfig',
+    'crispy_forms',
+    'fontawesomefree',
+
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-
-    'crispy_forms',
-    'fontawesomefree',
 ]
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
@@ -132,3 +133,6 @@ MEDIA_URL = '/media/'
 
 # Path where media is stored
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+LOGIN_REDIRECT_URL = 'home'
+LOGIN_URL = 'login'

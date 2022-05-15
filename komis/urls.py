@@ -6,7 +6,7 @@ from django.conf.urls.static import static
 
 
 urlpatterns = [
-    path('', views.home),
+    path('', views.home, name='home'),
     path('search/<int:price_min>/<int:price_max>/<str:marka>', views.search, name='oferty'),
     path('add/', SamochodCreateView.as_view(), name='samochod_add'),
     path('export/', export_csv, name='export_csv'),

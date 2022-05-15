@@ -22,7 +22,12 @@
                 <ul>
                     <li><a href="/">Strona główna</a></li>
                     <li><a href="/search/0/10000000/all">Przeglądaj</a></li>
-                    <li><a href="/add/">Dodaj ogłoszenie</a></li>
+                    {% if user.is_authenticated %}
+                        <li><a href="/add/">Dodaj ogłoszenie</a></li>
+                        <li><a href="/profile/">Profil</a></li>
+                    {% else %}
+                        <li><a href="/login/">Zaloguj się</a></li>
+                    {% endif %}
                 </ul>
             </div>
         </div>
@@ -32,6 +37,13 @@
 
     <main class ="container-2">
         <div class="page-about">
+<!--            {% if messages %}-->
+<!--                {% for message in messages %}-->
+<!--                  <div class="alert alert-{{ message.tags }}">-->
+<!--                      {{ message }}-->
+<!--                  </div>-->
+<!--                {% endfor %}-->
+<!--            {% endif %}-->
             {% block content %}{% endblock %}
         </div>
     </main>
