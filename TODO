@@ -10,7 +10,7 @@ TOD font awesome
 TOD stronicowanie wyników, zmiana liczby wyników na stronie (dane przechowywane w pasku adresu - metoda GET)
 TOD widok pozwala na pobranie części danych z aplikacji jako np. CSV - 3
 TOD filtrowanie listy elementów co najmniej 2 typów - 4
+TOD formularze do innych modeli i ich wyświetlenie - 1
 TODO ładowanie bibliotek z naszego serwera, nie zewnętrznego - 2 ??????????
 TODO jeszcze jakis dynamiczny element w js - 2 ??????????
 TODO zmiana wyswietlania obrazkow na HttpResponse w view.py - 3 ??????????
-TODO formularze do innych modeli i ich wyświetlenie - 1

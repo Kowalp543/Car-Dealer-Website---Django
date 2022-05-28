@@ -5,6 +5,6 @@ from .models import Samochod
 from .models import Kupujacy
 
 admin.site.register(Samochod)
-admin.site.register(Kupujacy)
+# admin.site.register(Kupujacy)
 
 

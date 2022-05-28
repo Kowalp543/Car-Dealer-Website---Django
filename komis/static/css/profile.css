@@ -1,0 +1,148 @@
+.page-profile-name {
+    width: 80%;
+}
+
+.page-profile-name h1 {
+    font-size: 50px;
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+.page-profile-container {
+    display: flex;
+    align-items: start;
+    width: 80%;
+}
+
+
+.page-profile-content {
+    width: 80%;
+}
+
+.page-profile-menu {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.page-profile-menu-buttons {
+    border-radius: 5px;
+    border: solid 2px #C0C0C0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin-top: 0px;
+}
+
+.page-profile-menu-buttons a {
+    width: 100%;
+    padding: 20px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 600;
+    color: #000000;
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+
+.page-profile-menu-buttons a:hover {
+    background-color: #C6E5FF;
+    text-decoration: none;
+    color: #FF4E4E;
+}
+
+.page-profile-menu-buttons span {
+    font-weight: 800;
+}
+
+
+
+
+
+
+
+.page-offer {
+    width: 92%;
+    height: 180px;
+    border: solid 2px #FF4E4E;
+    outline: solid 6px #C6E5FF;
+    border-radius: 15px;
+    margin-bottom: 50px;
+    display: flex;
+    align-item: center;
+    -webkit-box-shadow: 0px 10px 15px -5px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0px 10px 15px -5px rgba(0,0,0,0.5);
+    box-shadow: 0px 10px 15px -5px rgba(0,0,0,0.5);
+    transition: all 0.4s ease-in-out;
+}
+
+.page-offer:hover {
+    transform: scale(0.99);
+    opacity: 0.8;
+}
+
+.offer-img {
+    margin-left: 10px;
+    margin-top: 8px;
+}
+
+.car-img {
+    height: 160px;
+    width: 200px;
+    border-radius: 10px;
+    border: solid 1px #C6E5FF;
+}
+
+.offer-info {
+    margin-top: 0px;
+    margin-left: 30px;
+}
+
+.offer-name p {
+    font-size: 20px;
+    font-weight: 700;
+    margin-top: 16px;
+}
+
+.offer-parameters p {
+    font-size: 14px;
+}
+
+.offer-price:last-of-type {
+    margin-left: auto;
+    margin-right: 30px;
+}
+
+.offer-price p {
+    font-size: 30px;
+    font-weight: 700;
+    color: #FF4E4E;
+    margin-top: 10px;
+}
+
+.offer-price span {
+    font-size: 20px;
+}
+
+.step-links a {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #000000;
+    font-weight: 800;
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+.button-clean-filter {
+    height: 38px;
+    background-color: #C10000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+}
+
+.button-clean-filter:hover {
+    background-color: #AD0000;
+}

@@ -1,5 +1,6 @@
-from django.db import models
 from django.urls import reverse
+from django.conf import settings
+from django.db import models
 
 
 class Kupujacy(models.Model):
@@ -20,6 +21,7 @@ class Samochod(models.Model):
         ('l', 'LPG'),
     ])
     image = models.ImageField(upload_to='images')
+    sprzedajacy = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)   #models.ForeignKey(User, on_delete=models.CASCADE)
 
     def get_absolute_url(self):
         return reverse('home')
@@ -30,7 +32,7 @@ class Samochod(models.Model):
 
 class Kupno(models.Model):
     samochod = models.ForeignKey(Samochod, on_delete=models.CASCADE)
-    kupujacy = models.ForeignKey(Kupujacy, on_delete=models.CASCADE)
+    sprzedajacy = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
 
 
 

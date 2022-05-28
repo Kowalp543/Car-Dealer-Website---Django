@@ -21,7 +21,7 @@
             <div class="page-nav-list">
                 <ul>
                     <li><a href="/">Strona główna</a></li>
-                    <li><a href="/search/0/10000000/all">Przeglądaj</a></li>
+                    <li><a href="/search/">Przeglądaj</a></li>
                     {% if user.is_authenticated %}
                         <li><a href="/add/">Dodaj ogłoszenie</a></li>
                         <li><a href="/profile/">Profil</a></li>
@@ -71,8 +71,13 @@
                             <div class="page-footer-nav-menu">
                                 <ul>
                                     <li><a href="/">Strona główna</a></li>
-                                    <li><a href="/search/">Przeglądaj samochody</a></li>
-                                    <li><a href="/add/">Dadaj ogłoszenie</a></li>
+                                    <li><a href="/search/0/10000000/all">Przeglądaj</a></li>
+                                    {% if user.is_authenticated %}
+                                        <li><a href="/add/">Dodaj ogłoszenie</a></li>
+                                        <li><a href="/profile/">Profil</a></li>
+                                    {% else %}
+                                        <li><a href="/login/">Zaloguj się</a></li>
+                                    {% endif %}
                                 </ul>
                             </div>
                         </div>

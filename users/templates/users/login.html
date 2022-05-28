@@ -9,7 +9,7 @@
 {% endblock %}
 
 {% block content %}
-<div class="content-section" style="margin-top: 50px;">
+<div class="content-section" style="margin-top: 70px;">
     <form method="POST">
         {% csrf_token %}
         <fieldset class="form-group">
@@ -20,7 +20,7 @@
             <button class="btn btn-outline-info" type="submit">Zaloguj</button>
         </div>
     </form>
-    <div class="border-top pt-3">
+    <div class="border-top pt-3" style="margin-bottom: 50px;">
         <small class="text-muted">
             Nie posiadasz jeszcze konta? <a class="ml-2" href="{% url 'register' %}">Zarejestruj się</a>
         </small>
