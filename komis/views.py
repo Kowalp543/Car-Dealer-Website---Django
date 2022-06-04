@@ -31,7 +31,7 @@ def search(request, **kwargs):
         samochod_list = Samochod.objects.filter(cena__gte=kwargs['price_min'],
                                                 cena__lte=kwargs['price_max'],
                                                 marka__icontains=kwargs['marka'])
-    paginator = Paginator(samochod_list, 5)
+    paginator = Paginator(samochod_list, 8)
 
     page_number = request.GET.get('page')
     page_obj = paginator.get_page(page_number)

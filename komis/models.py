@@ -1,6 +1,7 @@
 from django.urls import reverse
 from django.conf import settings
 from django.db import models
+from django_softdelete.models import SoftDeleteModel
 
 
 class Kupujacy(models.Model):
@@ -21,7 +22,7 @@ class Samochod(models.Model):
         ('l', 'LPG'),
     ])
     image = models.ImageField(upload_to='images')
-    sprzedajacy = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)   #models.ForeignKey(User, on_delete=models.CASCADE)
+    sprzedajacy = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
 
     def get_absolute_url(self):
         return reverse('home')
